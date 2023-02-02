@@ -10,5 +10,13 @@ $(function(){
         // play audio
         toast.play();
         $('#toast').toast({ autohide: false }).toast('show');
+        $("#product").text($(e.target).data("product"));
+        $("#code").text($(e.target).data("code"));
     });
+
+    $(document).keyup(function(e){
+        if (e.keyCode == 27){
+            $("#toast").toast("hide");
+        }
+    })
 });
