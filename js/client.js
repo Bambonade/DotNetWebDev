@@ -1,7 +1,7 @@
-$(function(){
+$(function () {
     // preload audio
     var toast = new Audio('media/toast.wav');
-    $('.code').on('click', function(e) {
+    $('.code').on('click', function (e) {
         e.preventDefault();
         // first pause the audio (in case it is still playing)
         toast.pause();
@@ -14,8 +14,8 @@ $(function(){
         $("#code").text($(e.target).data("code"));
     });
 
-    $(document).keyup(function(e){
-        if (e.keyCode == 27){
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
             $("#toast").toast("hide");
         }
     })
